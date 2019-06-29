@@ -15,29 +15,67 @@
 Write code that prints all the numbers from 1 to 150, **inclusive.**
 
 ***
+let somRange = 1...150
+
+for i in somRange {
+print(i)
+}
+
+
 ## Question 2
 
 Write code that prints all the numbers from 142 to 159, **exclusive.**
+
+let somRange = 1..<159
+
+for i in somRange {
+print(i)
+}
 
 ***
 ## Question 3
 
 Write code that prints only the even numbers from 15 to 80, **inclusive.**
 
+let somRange = 15..<80
+
+for i in somRange where i % 2 == 0 {
+print(i)
+}
 ***
 ## Question 4
 
 Write code that prints only the odd numbers from 19 to 51, **inclusive.**
 
+let somRange = 19..<51
+
+for i in somRange where i % 2 == 1 {
+print(i)
+}
 ***
 ## Question 5
 
 Write code that prints all the numbers that end in a **5** from 1 to 100, **exclusive.**
 
+
+let somRange = 1..<100
+
+for i in somRange where i % 10 == 5 {
+print(i)
+}
+
+
+
 ***
 ## Question 6
 
 Write code that prints all the numbers that end in a 7 from 1 to 40, **inclusive.**
+
+let setRange = 1...40
+
+for i in setRange where i % 10 == 7 {
+print (i)
+}
 
 ***
 ## Question 7
@@ -46,12 +84,24 @@ Given a range of numbers from 20 to 150 inclusive, print out all the numbers tha
 
 `Numbers that are divisible by 3`
 
+let setRange = 20...150
+
+for i in setRange where i % 3 == 0 {
+print (i)
+}
 ***
 ## Question 8
 
 Given a range of numbers from 20 to 150 inclusive, print out all the numbers that follows these conditions:
 
 `Numbers that are divisible by 2 and 3`
+
+let setRange = 20...150
+
+for i in setRange where i % 2 == 0 && i % 3 == 0 {
+print (i)
+}
+
 
 ***
 ## Question 9
@@ -60,12 +110,25 @@ Given a range of numbers from 20 to 150 inclusive, print out all the numbers tha
 
 `Numbers that end with a 4`
 
+let setRange = 20...150
+
+for i in setRange where i % 10 == 4 {
+print (i)
+}
 ***
 ## Question 10
 
 Given a range of numbers from 20 to 150, print out all the numbers that follows these conditions:
 
 `Print out numbers: 31, 35, 40 to 60.`
+
+let setRange = 20...150
+
+for i in setRange {
+if i == 31 || i == 35 || i >= 40 && i <= 60 {
+print (i)
+}
+}
 
 ***
 ## Question 11
@@ -79,7 +142,7 @@ while (i > 3) {
     i += 1
 }
 
-// Your explanation here
+// It will run an infinite amount of times because 5 is greater than 3 and the outputs will all be greater than 5  
 ```
 
 ***
@@ -92,7 +155,7 @@ var i = 5
 
 while (i > 3) {
     i += 1
-}
+} 
 ```
 
 ***
@@ -219,10 +282,25 @@ outerloop: for x in 1...3 {
 
 Write code that prints out all the points in the area bounded by (0,0), (10,0), (0,10) and (10,10) **where** x and y are both integers.
 
+for i in 0...10 {
+for j in 0...10 {
+print ("\(i),\(j)", separator: "", terminator:"  ")
+}
+print(" ")
+}
+
 ***
 ## Question 21
 
 Write code that prints out all the points in the area bounded by (0,0), (10,0), (0,10) and (10,10) **where** the difference of x and y is at least 5, and x and y are both integers.
+
+for i in 0...10 {
+for j in 0...10 {
+if (i - j >= 5) || (j - i >= 5){
+print ("\(i),\(j)", separator: "", terminator:"  ")
+}
+};print("")
+}
 
 ***
 ## Question 22
