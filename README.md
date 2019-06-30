@@ -428,6 +428,15 @@ Input: `var N = 3`
 
 Output:
 ```swift
+var N = 3
+
+for i in 1...N {
+for j in 1...N {
+print("*", terminator: "")
+}
+print("")
+}
+
 ***
 ***
 ***
@@ -440,13 +449,5 @@ Try printing a single line of * first.
 Hint 2
 You can use print("") to print an empty line.
 
-var N = 3
-
-for i in 1...N {
-for j in 1...N {
-print("*", terminator: "")
-}
-print("")
-}
 
 ***
