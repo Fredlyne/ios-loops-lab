@@ -142,7 +142,7 @@ while (i > 3) {
     i += 1
 }
 
-// It will run an infinite amount of times because 5 is greater than 3 and the outputs will all be greater than 5  
+// It will run an infinite amount of times because 5 is greater than 3 and the outputs will all be greater than 5   
 ```
 
 ***
@@ -153,9 +153,18 @@ Change the code below to make the loop stop executing when i reaches 9.
 ```swift
 var i = 5
 
-while (i > 3) {
+while (i > 3 && i < 9) {
     i += 1
+    print(i)
 } 
+
+OR
+
+while (i < 9) {
+i += 1
+print(i)
+}
+
 ```
 
 ***
@@ -169,6 +178,19 @@ var i = 5
 while (i > 3) {
     i += 1
 }
+
+// edited to below
+var i = 5
+
+while (i > 3) {
+i += 1
+print(i)
+if i >= 1005 {
+break
+}
+}
+
+
 ```
 
 ***
@@ -182,6 +204,19 @@ var i = 5
 while (i > 3) {
     i += 1
 }
+
+var i = 5
+
+while (i > 3) {
+i += 1
+if i >= 1005  {
+break
+}
+if i % 2 == 0 {
+print(i)
+}
+}
+
 ```
 
 ***
@@ -204,6 +239,8 @@ repeat {
     print("i = \(i)")
     i += 1
 } while i <= 10
+
+No their outputs will not be different (in this case). The only differences between the two codes is the placement of the condition and that the repeat function will run the code even if the condition isnt met but only the first time. Loop one sets the condition before the iteration while loop two runs the iteration with the condition at the end. 
 ```
 
 ***
@@ -211,6 +248,33 @@ repeat {
 
 What's the difference between `break` and `continue`?  Give an example that demonstrates their differences.
 
+```
+The continue function will "continue" to run the loop and only skip over (so to speak) the iteration of whatever condition set in place. It continues on to the next iteration in the code (within parameters if there are any).
+
+EX.
+var i = 7
+
+for i in 0...11 {
+if i == 9 {
+continue
+}
+print(i)
+}
+
+
+The break function will end the loop  IMMEDIATELY once the condition has been met in that exact iteration, it stops and moves on to the next code. 
+
+EX.
+var i = 7
+
+for i in 0...11 {
+if i == 9 {
+break
+}
+print(i)
+}
+
+```
 ***
 ## Question 17
 
@@ -223,15 +287,18 @@ for i in 1...10 {
     }
     print(i)
 }
+
+1
+2
+3
+8
+9
+10
 ```
 
 []1
 []2
 []3
-[]4
-[]5
-[]6
-[]7
 []8
 []9
 []10
@@ -248,18 +315,15 @@ for i in 1...10 {
     }
     print(i)
 }
+1
+2
+3
 ```
 
 []1
 []2
 []3
-[]4
-[]5
-[]6
-[]7
-[]8
-[]9
-[]10
+
 
 ***
 ## Question 19
@@ -275,12 +339,20 @@ outerloop: for x in 1...3 {
         print("x = \(x), y = \(y)")
     }
 }
+
+x = 1, y = 1
+x = 2, y = 1
+x = 3, y = 1
+
+the iteration will run but once y encounters 2 the iteration will stop and continue in the next number of x 
+
 ```
 
 ***
 ## Question 20
 
 Write code that prints out all the points in the area bounded by (0,0), (10,0), (0,10) and (10,10) **where** x and y are both integers.
+```
 
 for i in 0...10 {
 for j in 0...10 {
@@ -288,12 +360,12 @@ print ("\(i),\(j)", separator: "", terminator:"  ")
 }
 print(" ")
 }
-
+```
 ***
 ## Question 21
 
 Write code that prints out all the points in the area bounded by (0,0), (10,0), (0,10) and (10,10) **where** the difference of x and y is at least 5, and x and y are both integers.
-
+```
 for i in 0...10 {
 for j in 0...10 {
 if (i - j >= 5) || (j - i >= 5){
@@ -301,7 +373,7 @@ print ("\(i),\(j)", separator: "", terminator:"  ")
 }
 };print("")
 }
-
+```
 ***
 ## Question 22
 
