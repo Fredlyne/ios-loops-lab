@@ -389,6 +389,15 @@ Output:
 9
 16
 25
+
+var N = 5
+var squaredNumber = 1
+
+while squaredNumber <= N {
+print(squaredNumber*squaredNumber)
+squaredNumber = squaredNumber + 1
+}
+
 ```
 
 ***
@@ -403,6 +412,15 @@ Output:
 ```swift
 **
 **
+
+var N = 2
+
+for i in 1...N {
+for i in 1...N {
+print("*", terminator: "")
+}
+print("")
+}
 ```
 
 Example 2:
@@ -413,6 +431,7 @@ Output:
 ***
 ***
 ***
+
 ```
 
 Hint 1
@@ -420,5 +439,14 @@ Try printing a single line of * first.
 
 Hint 2
 You can use print("") to print an empty line.
+
+var N = 3
+
+for i in 1...N {
+for j in 1...N {
+print("*", terminator: "")
+}
+print("")
+}
 
 ***
